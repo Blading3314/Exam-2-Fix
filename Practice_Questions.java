@@ -24,7 +24,7 @@ public class Practice_Questions
         temperatures.add(60.9);
         temperatures.add(38.9);
         temperatures.add(42.4);
-        //findHighestTemp(temperatures);
+        findHighestTemp(temperatures);
     }
 
     /**
@@ -37,7 +37,7 @@ public class Practice_Questions
     { //Question 24
     String c = "car";
     String v = "truck";
-    if (c == v){
+    if (c.equals(v)){
         return true;
     } else{
         return false;
@@ -45,33 +45,26 @@ public class Practice_Questions
     
     }
     //Question 25
- /*public void findHighestTemp (ArrayList<Double> temperatures){
+ public void findHighestTemp (ArrayList<Double> temperatures){
     int count = 0;
     double max = 0;
-    for (int i = 0; i > Collections.max; i++){
-        System.out.println("Highest case of fever: " + max);
-        
+    for (Double temp : temperatures){
+        if(temp > 37.5){
+            count++;
+        }
+        if ( temp > max) {
+         max = temp;
+        }
+     
     }
     System.out.println("Number of fever cases reported: " + count);
-    
-        /*int i = 0;
-        while(i >temp){
-            i++; 
-        }
-        if (i > 37.5 && temp < Collections.max) {
-            System.out.println(i+"are greater than 37.5");
-            System.out.println("Max:" +temp);
-        }
-        */
-        //Question 26 
-       /* for (int i = 0; i >temp && i< Collections.max; i++){
-             System.out.println("Max:" + i);
-        }
-        //Question 27
-         for (int i = 0; i >temp && i< Collections.sort; i++){
-             System.out.println("Max:" + i);
-    }
-    */
+    //System.out.println("Highest case of fever: " + max);
+    //Question 26 - using Collections.max    
+    //System.out.println("Highest case of fever: " + Collections.max(temperatures));
+    // Question 27 - using Collections.sort
+    Collections.sort(temperatures);
+    System.out.println("Highest case of fever: " + temperatures.get(temperatures.size()-1));
+}
 }
 
 
